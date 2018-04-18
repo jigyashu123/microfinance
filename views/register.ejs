@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MicroFinance-app</title>
+    <link rel="stylesheet" href="/css/bootstrap.css" />
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <div class="container">
+        <div class="header clearfix">
+          <nav>
+            <ul class="nav nav-pills pull-right">
+              <% if (locals.user){ %>
+              <li role="presentation"><a href="/">Dashboard</a></li>
+              <li role="presentation"><a href="/users/logout">logout</a></li>
+              <% } else { %>
+              <li role="presentation"><a href="/users/register">Register</a></li>
+              <li role="presentation"><a href="/users/login">login</a></li>
+              <% } %>
+            </ul>
+          </nav>
+          <h3 class="text-muted">MicroFinance-app</h3>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12">
+         <link rel="stylesheet"  type="text/css" href="/css/style1.css" />
+
+    </head>
+    <body>
+      <div class="container">
+        <header>
+          <h1> Registration Form</h1>
+        </header>
+            <div id="wrapper">
+              <div id="login" >
+
+              <form  action="/users/register" method="post">
+                <h1> Sign up </h1>
+                <% if (locals.errors !== undefined){ %>
+                  <p>there are errors on page</p>
+                  <% for (const error of errors){ %>
+                    <li><%= error.msg %> </li>
+                    <% } %>
+                    <% }  %>
+                <p>
+                  <label for="name" class="name" >Name</label>
+                  <input idname" name="name" type="text" placeholder="name" />
+                </p>
+                <p>
+                  <label for="username" class="uname" >Username</label>
+                  <input id="usernamep" name="username"  type="text" placeholder="mysuperusername690" />
+                </p>
+                <p>
+                  <label for="email" class="youmail"> Email</label>
+                  <input id="email" name="email"  type="email" placeholder="mysupermail@mail.com"/>
+                </p>
+                <p>
+                  <label for="country" class="country"  > Country</label>
+                  <input id="country" name="country"  type="country" placeholder="India"/>
+                </p>
+                <p>
+                  <label for="password" class="youpasswd">Password </label>
+                  <input id="password" name="password"  type="password" placeholder="eg. X8df!90EO"/>
+                </p>
+                <p>
+                  <label for="password2" class="youpasswd" >Please confirm your password </label>
+                  <input id="password2" name="password2"  type="password" placeholder="eg. X8df!90EO"/>
+                </p>
+                <p class="signin button">
+  								<input type="submit" value="Sign up"/>
+  							</p>
+                <p class="change_link">
+  								Already a member ?
+  								<a href="/users/login">Log in </a>
+              </div>
+          </div>
+        </div>
+
+        <footer class="footer">
+          <p>&copy; 2016 loginapp, Inc.</p>
+        </footer>
+
+      </div> <!-- /container -->
+
+</body>
+</html>

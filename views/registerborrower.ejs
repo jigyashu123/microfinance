@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Loginapp</title>
+    <link rel="stylesheet" href="/css/bootstrap.css" />
+  <link rel="stylesheet" href="/css/style2.css" />
+</head>
+<body>
+
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">GoodLuck Finance Company</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+            <li><a href="/users/index">Dashboard</a></li>
+              <li><a href="/users/logout">logout</a></li>
+            </ul>
+            <form class="navbar-form navbar-right">
+              <input type="text" class="form-control" placeholder="Search...">
+            </form>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-3 col-md-2 sidebar">
+            <ul class="nav nav-sidebar">
+              <li class="active"><a href="#" > Overview <span class="sr-only">(current)</span></a></li>
+              <li><a href="#">Report</a></li>
+              <li><a href="#">Analytics</a></li>
+            </ul>
+            <ul class="nav nav-sidebar">
+              <li><a href="">Add new borrower</a></li>
+              <li><a href="">Address details</a></li>
+              <li><a href="">Accouts details</a></li>
+              <li><a href="">Borrower Card</a></li>
+            </ul>
+            <ul class="nav nav-sidebar">
+              <li><a href="">Nav item again</a></li>
+              <li><a href="">One more nav</a></li>
+              <li><a href="">Another nav item</a></li>
+            </ul>
+          </div>
+
+
+  <h2 class="sub-header">Section title</h2>
+    <form  action="#" method="post">
+
+
+  <div class="panel panel-primary" style="margin-left:30%;margin-right:14%; background-color: #F7F7F7;">
+        <div class="panel-heading" >
+            <h3 class="panel-title"><center><font size="6">Loan Application Form</font></center></h3>
+        </div>
+        <div class="panel-body">
+           <div class="col-md-12 col-sm-12">
+               <span>Please fill all the entries</span><br /><br />
+           </div>
+             <div class="col-md-12 col-sm-12">
+                 </div>
+
+                 <div class="form-group col-md-6 col-sm-6">
+                     <label for="loanid">1: LoanId/no.*</label><br>
+                     <input name="loanid" type="text" maxlength="10" id="loanid" tabindex="6"  required />
+                 </div>
+
+
+                  <div class="form-group col-md-6 col-sm-6">
+                      <label for="date">2: Loan Agreement Date*</label><br  />
+                    <input name="date" type="date"  id="date" required />
+                  </div>
+
+
+                  <div class="form-group col-md-6 col-sm-6">
+                      <label for="name">3: Name*</label><br>
+                    <input name="name" type="text" maxlength="50" id="name" required />
+                  </div>
+
+
+                <div class="form-group col-md-6 col-sm-6">
+                    <label for="wo">3: w/o*</label><br>
+                <input name="wo" type="text" maxlength="50" id="wo" required />
+                </div>
+
+                <div class="form-group col-md-6 col-sm-6">
+                    <label for="groupname">4: Group Name*</label><br>
+                  <input name="groupname" type="text" maxlength="50" id="groupname" required />
+                </div>
+                <div class="form-group col-md-6 col-sm-6">
+                    <label for="village">5: village*</label><br>
+                  <input name="village" type="text" maxlength="50" id="village" required />
+                </div>
+
+                    <div class="form-group col-md-12 col-sm-12">
+                      <label for="address">6: Address*</label><br>
+
+                    <textarea name="address" rows="2" cols="40" id="address" tabindex="14" required ></textarea>
+                  </div>
+
+                  <div class="form-group col-md-6 col-sm-6">
+                      <label for="mobileno">7: Mobileno.*</label><br>
+                    <input name="mobileno" type="text" pattern="[789][0-9]{9}" required />
+                  </div>
+
+                  <div class="form-group col-md-6 col-sm-6">
+                      <label for="Aadharid1">8:Aadharid 1* (format: xxxx-xxxx-xxxx):</label><br>
+                    <input name="Aadharid1" type="text" pattern="^\d{4}-\d{4}-\d{4}$" required />
+                  </div>
+
+                  <div class="form-group col-md-6 col-sm-6">
+                      <label for="Aadharid2">9:Aadharid 2* (format: xxxx-xxxx-xxxx):</label><br>
+                    <input name="Aadharid2" type="text" pattern="^\d{4}-\d{4}-\d{4}$" required />
+                  </div>
+
+                  <div class="form-group col-md-6 col-sm-6">
+                      <label for="startdate">10:Starting date*</label><br>
+                    <input name="startdate" type="date" maxlength="50" id="startdate" required />
+                  </div>
+
+                  <div class="form-group col-md-6 col-sm-6">
+                      <label for="endate">11:Ending date*</label><br>
+                    <input name="enddate" type="date" maxlength="50" id="enddate" required />
+                  </div>
+
+                  <div class="form-group col-md-6 col-sm-6">
+                      <label for="installment">12:Installment*</label><br>
+                    <input name="installment" type="text" maxlength="15" id="installment" required />
+                  </div>
+
+                  <div class="form-group col-md-6 col-sm-6">
+                      <label for="per">13: Per*</label><br>
+
+                      <select name="per" id="per" tabindex="9" class="dropdown validate[required] form-control input-sm">
+<option value="">Select</option>
+<option value="D">Day</option>
+<option value="W">Week</option>
+<option value="M">Month</option>
+<option value="SM">six Month</option>
+
+</select>
+                  </div>
+
+                    <div class="form-group col-md-6 col-sm-6">
+                        <label for="loan amount">14: Loan amount*</label><br>
+                        <input name="loanamount" type="text" maxlength="50" id="loanamount" tabindex="6" required />
+                    </div>
+
+
+                    <div class="form-group col-md-6 col-sm-6">
+                        <label for="noofinstallments">15: No.OfInstallments*</label><br>
+                        <input name="noofinstallments" type="text" maxlength="3" id="noofinstallments" tabindex="6" required />
+
+                    <br></br>
+
+
+
+                    <center>
+                      <input type="submit" value="Submit" />
+                     </center>
+                   </div>
+                    <div class="form-group col-md-12 col-sm-12">
+                          <span style =" text-decoration: underline";>NOTE</span>: The Borrower shall return all amount with all interest charges.<br />
+  in accordance with the procedure of company</p>
+                             </div>
+
+
+        </div>
+         </div>
+    </div>
+  </div>
+</div>
+
+
+          </body>
+          </html>

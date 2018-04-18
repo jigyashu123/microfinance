@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Loginapp</title>
+    <link rel="stylesheet" href="/css/bootstrap.css" />
+  <link rel="stylesheet" href="/css/style2.css" />
+</head>
+<body>
+
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">GoodLuck Finance Company</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+            <li><a href="/users/index">Dashboard</a></li>
+              <li><a href="/users/findborrower"> View borrower</a></li>
+              <li><a href="/users/id"> ViewBorrowerById</a></li>
+              <li><a href="#">Groups</a></li>
+              <li><a href="#">Branch</a></li>
+
+              <li><a href="/users/logout">logout</a></li>
+            </ul>
+            <form class="navbar-form navbar-right">
+              <input type="text" class="form-control" placeholder="Search...">
+            </form>
+          </div>
+        </div>
+      </nav>
+      <h2><%= pp.name %></h2>
+      <style>
+         /* Set black background color, white text and some padding */
+         footer {
+           background-color: #555;
+           color: white;
+           padding: 15px;
+         }
+         div.classWithPad1{
+         background-color:#9400D3;
+         color: white;
+         margin: 40px 9px 10px 9px;
+         padding:40px;
+         font-size:40px;
+        max-width: 700px;
+        min-height:220px !important;
+         }
+
+         div.classWithPad2{
+       background-color: rgb(145, 255, 224);
+         color: white;
+         margin: 10px 9px 10px 9px;
+         padding:40px;
+         font-size:40px;
+        max-width: 700px;
+        min-height:220px !important;
+         }
+
+
+
+       </style>
+<div class="container text-center">
+  <div class="row">
+    <div class="col-sm-3 well">
+      <div class="well">
+        <p><a href="#">My Profile</a></p>
+        <img src="https://www.reduceimages.com/img/image-after.jpg" class="img-circle" height="65" width="65" alt="Avatar">
+      </div>
+      <% pp.forEach(function(a) { %>
+      <div class="col-lg-12 col-md-12">
+                    <span class="glyphicon glyphicon-user input-place"></span>
+                    <input type="text" class="form-control form-input" value="<%= a.name %>" placeholder="<%= a.name %>" disabled id="<%= a.name %>">
+                </div>
+                <div class="col-lg-12 col-md-12">
+                  <span class="glyphicon glyphicon-star-empty input-place"></span>
+                    <input type="text" class="form-control form-input" value="<%= a.wo %>" placeholder="<%= a.wo %>" disabled id="<%= a.wo %>">
+                </div>
+                <div class="col-lg-12 col-md-12">
+                    <span class="glyphicon glyphicon-envelope input-place"></span>
+                    <input type="text" class="form-control form-input" value="<%= a.groupname %>" placeholder="<%= a.groupname %>" disabled id="<%= a.groupname %>">
+                </div>
+                <div class="col-lg-12 col-md-12">
+                     <span class="glyphicon glyphicon-earphone input-place"></span>
+                    <input type="text" class="form-control form-input" value="<%= a.mobileno %>" placeholder="<%= a.mobileno %>" disabled id="<%= a.mobileno %>">
+                </div>
+                <div class="col-lg-12 col-md-12">
+                <span class="glyphicon glyphicon-map-marker input-place"></span>
+                    <input type="text" class="form-control form-input" value="<%= a.village %>" placeholder="<%= a.village %>" disabled id="<%= a.village %>">
+
+                </div>
+                <div class="col-lg-12 col-md-12">
+                <span class="glyphicon glyphicon-map-marker input-place"></span>
+                    <input type="text" class="form-control form-input" value="<%= a.installment %>" placeholder="<%= a.installment %>" disabled id="<%= a.installment %>">
+
+                </div>
+
+                <div class="col-lg-12 col-md-12">
+                <span class="glyphicon glyphicon-map-marker input-place"></span>
+                    <input type="text" class="form-control form-input" value="<%= a.loanamount%>" placeholder="<%= a.loanamount%>" disabled id="<%= a.loanamount%>">
+
+                </div>
+                <%})%>
+
+
+
+  </div>
+       <a href="/users/GrantLoan">
+    <div class="col-sm-4  classWithPad1">
+        <p>loan Info</p>
+      </div>
+    </a>
+    <a href="/users/history">
+        <div class="col-sm-4  classWithPad1">
+          <p>Previous loan history</p>
+        </div>
+    </a>
+    <a href="/users/guarantee">
+        <div class="col-sm-4  classWithPad2">
+                Guarantee
+            </div>
+    </a>
+    <a href="/users/groups">
+        <div class="col-sm-4  classWithPad2">
+                Group detail
+            </div>
+    </a>
+
+
+
+</div>
